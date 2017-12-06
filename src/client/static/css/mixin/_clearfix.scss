@@ -1,0 +1,29 @@
+/* 清浮动模块 */
+@mixin clearfix(){
+	&:before,
+	&:after{
+		content: '';
+		display: table;
+	}
+	&:after{
+		clear: both;
+	}
+}
+
+@mixin fl(){
+	float: left;
+}
+
+@mixin fr(){
+	float: right;
+}
+
+.clearfix{
+	@include clearfix;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}

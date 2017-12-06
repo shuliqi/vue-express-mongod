@@ -1,0 +1,6 @@
+/* 单行文本溢出省略 */
+@mixin text-overflow(){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

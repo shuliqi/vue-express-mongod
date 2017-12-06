@@ -1,0 +1,12 @@
+/**
+ * [mTextOverflow 移动端文字溢出省略]
+ * @param  {[string]} $line  [eg：'1'，可选参数，默认为单行]
+ */
+
+@mixin mTextOverflow ($line: 1) {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
