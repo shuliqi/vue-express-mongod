@@ -1,0 +1,10 @@
+/* 元素水平垂直居中 */
+
+@mixin ver_cen() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}

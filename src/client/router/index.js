@@ -7,6 +7,7 @@ import store from './../store/store'
 // 导入相应的子组件
 import webIndex from './../components/web/index'
 import adminIndex from './../components/admin/index'
+import login from '../components/admin/login'
 
 Vue.use(Router)
 
@@ -18,8 +19,13 @@ var router = new Router({
             component: webIndex
         },
         {
-            name: 'adminIndex',
+            name: 'login',
             path: '/admin',
+            component: login
+        },
+        {
+            name: 'adminIndex',
+            path: '/adminIndex',
             component: adminIndex
         }
     ]

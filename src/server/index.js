@@ -6,25 +6,6 @@ import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
 import webpack from 'webpack'
 
-var users = require('./router/user.js');
-/**
- * 数据库链接
- */
-var mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost/blog') //连接本地数据库blog 
-
-var db = mongoose.connection;
-
-// 连接成功
-db.on('open', function() {
-    console.log('MongoDB Connection Successed');
-});
-// 连接失败
-db.on('error', function() {
-    console.log('MongoDB Connection Error');
-});
-//链接数据库完毕
 
 // 引入history模块
 import history from 'connect-history-api-fallback'
@@ -65,8 +46,14 @@ app.use(express.static(path.join(__dirname, 'views')))
 app.get('/', function(req, res) {
     res.sendFile('./views/register.html')
 })
-app.use('/users', users);
 
+
+
+var users = require('./router/user.js');
+var login = require('./router/login.js')
+app.use('/users', users);
+//用户登录
+app.use('/login', login);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found')
