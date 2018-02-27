@@ -1,6 +1,17 @@
 <template>
   <div>
-    前端首页
+      <el-col :span="8" v-for="(item, index) in data" :key="index" :offset="index > 0 ? 2 : 0">
+        <el-card :body-style="{ padding: '0px' }">
+       
+          <div style="padding: 14px;">
+            <span>好吃的汉堡</span>
+            <div class="bottom clearfix">
+              <time class="time" v-html="item.content"></time>
+              <el-button type="text" class="button">操作按钮</el-button>
+            </div>
+          </div>
+        </el-card>
+      </el-col>
   </div>
 </template>
 
@@ -9,13 +20,14 @@
 export default {
   data () {
     return {
-      msg: '前端首页'
+      msg: '前端首页',
+      data:[]
     }
   },
   created(){
      const baseUrl = this.$store.state.url
-      this.$ajax.get( baseUrl + 'users').then(res=>{
-        console.log(res)
+     this.$axios.get( baseUrl + '/indexWeb').then(res=>{
+        this.data = res.data
       })
   }
 }

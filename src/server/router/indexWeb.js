@@ -7,12 +7,24 @@ var assert = require('assert');
 var DB_URL = "mongodb://localhost:27017/blog";
 
 
-router.get('/', function(req, res, next) {
-    MongoClient.connect(DB_URL, function(error, db) {
+router.get('/', function (req, res, next) {
+  MongoClient.connect(DB_URL, function (error, db) {
+
+    assert.equal(null, error);
+    mongo.findData(db, req.query, 'article', function (data) {
      
-        assert.equal(null, error);
-        mongo.insertData(db, req.query,'article', function(data) {})
-    });
+    
+      if (data !== []) {
+        res.send(data)
+      } else {
+      
+        res.send({
+          success: true
+        })
+      }
+
+    })
+  });
 
 
 
