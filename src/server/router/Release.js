@@ -9,21 +9,25 @@ var DB_URL = "mongodb://localhost:27017/blog";
 
 router.get('/', function(req, res, next) {
     MongoClient.connect(DB_URL, function(error, db) {
-        console.log('连接成功!');
+        console.log('发布成功!');
         console.log(req.query)
         assert.equal(null, error);
-        mongo.findData(db, req.query, function(data) {
-            if (data !== []) {
-                res.send({
-                    success: true
-                })
-            } else {
-                res.send({
-                    success: true
-                })
-            }
+        // mongo.findData(db, req.query, function(data) {
+        //     if (data !== []) {
+        //         res.send({
+        //             success: true
 
-        })
+
+        //         })
+        //     } else {
+                res.send({
+
+                    success: true
+
+                })
+        //     }
+
+        // })
     });
 
 

@@ -6,7 +6,7 @@ mongo.prototype.insertData = function(db) {
     var devices = db.collection('user');
     var data = { "name": "12312", pass: "2599" };
     devices.insert(data, function(error, result) {
-        if (error) {
+        if (errbor) {
             console.log('Error:' + error);
         } else {
 

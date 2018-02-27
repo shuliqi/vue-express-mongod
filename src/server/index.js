@@ -46,14 +46,13 @@ app.use(express.static(path.join(__dirname, 'views')))
 app.get('/', function(req, res) {
     res.sendFile('./views/register.html')
 })
-
-
-
-var users = require('./router/user.js');
+var users = require('./router/user.js')
 var login = require('./router/login.js')
+var Release = require('./router/Release.js')
 app.use('/users', users);
 //用户登录
 app.use('/login', login);
+app.use('/Release', Release);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found')

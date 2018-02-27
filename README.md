@@ -1,4 +1,4 @@
-Vue + Express 前后端脚手架（基于iViewUI）
+Vue + Express 前后端脚手架（基于ElementUI）
 =========================================
 
 在原版本基础之上，修改了webpack的相关配置文件。使得项目可以运行build命令，编译vue相关代码。
@@ -11,7 +11,7 @@ fork源：[southerncross/vue-express-dev-boilerplate](https://github.com/souther
 ## 关键词
 
 - Vue (vue-router + vuex)
-- iView
+- Element
 - Express
 - Nodemon
 - Webpack
