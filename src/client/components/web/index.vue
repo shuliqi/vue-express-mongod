@@ -6,7 +6,7 @@
           <div style="padding: 14px;">
             <span>好吃的汉堡</span>
             <div class="bottom clearfix">
-              <time class="time" v-html="item.content"></time>
+              <time class="time" v-html="item.content" v-highlight></time>
               <el-button type="text" class="button">操作按钮</el-button>
             </div>
           </div>
