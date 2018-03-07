@@ -5,7 +5,7 @@ import 'highlight.js/styles/monokai-sublime.css'
 let Highlight = {}
 Highlight.install = function (Vue, options) {
   Vue.directive('highlight', function (el) {
-    let blocks = el.querySelectorAll('pre code');
+    let blocks = el.querySelectorAll('pre');
     blocks.forEach((block) => {
       Hljs.highlightBlock(block)
     })

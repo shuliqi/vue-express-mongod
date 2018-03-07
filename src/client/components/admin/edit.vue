@@ -2,7 +2,7 @@
  * @Author: mikey.zhaopeng 
  * @Date: 2018-01-04 15:38:30 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2018-02-27 15:47:11
+ * @Last Modified time: 2018-03-05 14:06:06
  */
 
 <template>
@@ -212,7 +212,7 @@ export default {
         this.Tags.push(tag)
       }
     },
-    //标签删除3
+    //标签删除
     handleClose(tag) {
         this.Tags.splice(this.Tags.indexOf(tag), 1);
     },

@@ -1,13 +1,13 @@
 <template>
   <div class="app full-height">
-    <vHeader></vHeader>
-    <vHSlide></vHSlide>
+    <!-- <vHeader></vHeader> -->
+    <!-- <vHSlide></vHSlide> -->
     <router-view class="view clearfix"></router-view>
   </div>
 </template>
 
 <script>
-import vHeader from '../client/components/admin/public/header';
+// import vHeader from '../client/components/admin/public/header';
 import vHSlide from '../client/components/admin/public/slide';
 export default {
   data () {
@@ -16,7 +16,7 @@ export default {
     }
   },
   components:{
-    vHeader,
+    // vHeader,
     vHSlide
   }
 }
@@ -28,14 +28,7 @@ html,
 body,
 .app {
   width: 100%;
-  height: 100%;
-  .view{
-    margin-left:12%;
-    background:#ebebeb;
-    font-size:12px;
-    height: 92%;
-    padding:30px;
-  }
+  height:100%;
 }
 
 </style>
