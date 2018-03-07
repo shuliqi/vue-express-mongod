@@ -16,9 +16,10 @@
       <!-- logo图片 -->
       <img class="logo" src="../../../../comon/images/logo.png" alt="">
       <b>APPLLEN</b>
-      <el-input v-model="input" placeholder="搜索"  suffix-icon="el-icon-search"></el-input>
+      <el-input v-model="input" @click.native="search()" placeholder="搜索"  suffix-icon="el-icon-search"></el-input>
+
     </header>
-     
+
   </div>
 </template>
 
@@ -29,7 +30,7 @@ export default {
     return {
       msg: '前端首页',
       data:[],
-      input:""
+      searchValue:""
     }
   },
   created(){
@@ -37,6 +38,12 @@ export default {
      this.$axios.get( baseUrl + '/indexWeb').then(res=>{
         this.data = res.data
       })
+  },
+  methods: {
+    // 文章搜索函数
+    search(){
+
+    }
   }
 }
 </script>
@@ -47,7 +54,6 @@ export default {
   header{
       overflow: hidden;
       position: fixed;
-      z-index: -10;
       top: 0;
       left: 0;
       zoom: 1;
@@ -111,7 +117,7 @@ export default {
       .el-input__inner{
         border-radius: 22px;
         border:none;
-        background-color: rgba(255, 255, 255, 0.36);
+        background-color: rgba(255, 255, 255, 0.22);
      
         font-family: SourceHanSansSC;
         font-size: 20px;
@@ -121,9 +127,7 @@ export default {
         line-height: normal;
         letter-spacing: -0.5px;
         text-align: left;
-        color: rgba(255, 255, 254, 0.22);
-
-        
+        color: #fff; 
       }
       .el-input__suffix {
           right: 18px;

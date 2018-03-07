@@ -1,12 +1,17 @@
-Vue + Express 前后端脚手架（基于ElementUI）
+Vue + Express + mongodb 前后端脚手架（基于ElementUI）
 =========================================
 
+<<<<<<< HEAD
 在原版本基础之上，修改了webpack的相关配置文件。使得项目可以运行build命令，编译vue相关代码。
 前端部分增加了vue全家桶（vue-router，vuex）以及iView的关联
 
+=======
+项目可以运行build命令，编译vue相关代码。
+前端部分增加了vue全家桶（vue-router，vuex）以及ElementUI的关联
+后端express部分
+>>>>>>> a2571749b189e16c836f5ca3c1492c7adca75a27
 重新修改了文件夹结构
 
-fork源：[southerncross/vue-express-dev-boilerplate](https://github.com/southerncross/vue-express-dev-boilerplate)
 
 ## 关键词
 
@@ -16,7 +21,11 @@ fork源：[southerncross/vue-express-dev-boilerplate](https://github.com/souther
 - Nodemon
 - Webpack
 - Npm
+<<<<<<< HEAD
 - 
+=======
+- mongodb
+>>>>>>> a2571749b189e16c836f5ca3c1492c7adca75a27
 
 
 ## 文件目录
@@ -78,4 +87,7 @@ fork源：[southerncross/vue-express-dev-boilerplate](https://github.com/souther
     
     生成后的代码会在根目录的dist目录下。
     此时可专门写一个生产环境启动express的脚本。
+<<<<<<< HEAD
 
+=======
+>>>>>>> a2571749b189e16c836f5ca3c1492c7adca75a27
