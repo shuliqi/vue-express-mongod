@@ -1,8 +1,5 @@
 <template>
   <div class="webIndex clearfix">
-  
-   
-   
     <!-- 头部 -->
     <header class="clearfix">
       <!-- <img  class="bg" src="../../../../comon/images/bg.png" alt=""> -->
@@ -24,7 +21,7 @@
     </header>
     <!-- 文章列表 -->
     <section class="section clearfix">
-      <dl>
+      <dl class="top_title">
         <dt>文章概览</dt>
         <dd>An overview of the article</dd>
       </dl>
@@ -91,16 +88,7 @@
             </div>
           </div>              
         </div>
-        <!-- <div class="con_middle clearfix fl">
-          <el-steps :active="active" direction="vertical" >
-            <el-step ></el-step>
-            <el-step ></el-step>
-            <el-step ></el-step>
-            <el-step ></el-step>
-            <el-step ></el-step>
-          </el-steps>
-
-        </div> -->
+    
         <div class="con_right clearfix fl">
           <div class="article_con ">
             <div class="title_left fr">
@@ -155,8 +143,35 @@
         </div>
 
       </div>
-
     </section>
+    <!-- 底部博客介绍 -->
+    <section class="clearfix introduce">
+      <dl class="top_title">
+        <dt>Appllen博客</dt>
+        <dd>appllen.com</dd>
+      </dl>
+      <div class="con">
+        2013 年 09 月，我有幸加入 NewThread 团队创新实验室 Feweb 组学习前端开发。一名正走在前端开发工程师路上的程序猿，从xxx起，我建立了属于自己的技术博客
+      </div>
+      <img class="bg_logo" src="../../../../comon/images/bg_logo.png" alt="">
+    </section>
+    <!-- 友情链接 -->
+    <div  class="clearfix section">
+      <ul class="link clearfix">
+            <li> <a href="#"> 轩枫阁</a></li>
+            <li><a href="#">新思路团队网站-NewThread</a></li>
+            <li><a href="#">默识者</a></li>
+            <li><a href="#">文艺的聚集地</a></li>
+            <li><a href="#">新思路团队网站-NewThread</a></li>
+            <li><a href="#">蓝色栗子-petite-dd</a></li>
+            <li><a href="#">Sophyn的设计作品</a></li>
+            <li><a href="#">web-杨青个人博客</a></li>
+            <li><a href="#">伯乐在线-web前端个人博客</a></li>
+          </ul>
+    </div>
+   
+         
+
 
   </div>
 </template>
@@ -200,7 +215,8 @@ export default {
       // left: 0;
       // zoom: 1;
       width: 100%;
-      height:900px;
+      // max-width: 1200px;
+      height:950px;
       background-color: #fff;
       -webkit-background-size: cover;
       -o-background-size: cover;
@@ -282,16 +298,13 @@ export default {
 
 
   }
-  .section{
-    width: 100%;
-    height: auto;
-    background: #ebebeb;
-    dl{
-      width: 400px;
+  // 头部封装
+  .top_title{
+      width: 450px;
       margin: 50px auto;
       text-align: center;
       dt{
-        width: 180px;
+        width: 230px;
         font-family: PingFangSC;
         font-size: 36px;
         font-weight: 500;
@@ -307,18 +320,25 @@ export default {
 
       }
       dd{
-          font-size: 30px;
-          font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: normal;
-          letter-spacing: -0.8px;
-          text-align: right;
-          color: rgba(183, 151, 120, 0.5);
+        font-size: 30px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.8px;
+        text-align: center;
+        color: rgba(183, 151, 120, 0.5);
       }
-    }
+  }
+  // 文章列表
+  .section{
+    width: 100%;
+    height: auto;
+    background: #ebebeb;
+
     .article{
-      width: 1200px;
+      width:100%;
+      max-width: 1200px;
       margin: 0 auto;
       .con_left,.con_right{
         width: 49%;
@@ -444,6 +464,62 @@ export default {
          width: 49%;
       }
     }
+  }
+  // 介绍页
+  .introduce{
+    width: 100%;
+    background: #f0f0f0;
+    .con{
+        width: 714px;
+        height: 81px;
+        margin: 0 auto;
+        mix-blend-mode: undefined;
+        font-family: PingFangSC;
+        font-size: 24px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.6px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .bg_logo{
+    
+        margin: 0 auto;
+        width: 500px;
+        display: block;
+    }
+  }
+  // 友情链接
+  .link{
+    width: 100%;
+    max-width: 1200px;
+    margin: 18px auto;
+    height: auto;
+    text-align: center;
+    background: #ebebeb;
+    li{
+        display: inline-block;
+        mix-blend-mode: undefined;
+        font-family: PingFangSC;
+        font-size: 14px;
+        font-style: normal;
+        cursor: pointer;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.5px;
+        text-align: left;
+        a{
+            color: rgba(0, 0, 0, 0.5);
+            &:hover{
+              color: #b79778;
+            }
+        }
+        
+
+    }
+
   }
   
 }
