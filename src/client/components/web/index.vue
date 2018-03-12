@@ -1,7 +1,11 @@
 <template>
-  <div class="webIndex">
+  <div class="webIndex clearfix">
+  
+   
+   
+    <!-- 头部 -->
     <header class="clearfix">
-      <!-- 导航 -->
+      <!-- <img  class="bg" src="../../../../comon/images/bg.png" alt=""> -->
       <nav class="clearfix">
         <ul class="clearfix">
           <li class="clearfix">首页</li>
@@ -13,12 +17,146 @@
           <li class="clearfix">关于</li>
         </ul>
       </nav>
-      <!-- logo图片 -->
       <img class="logo" src="../../../../comon/images/logo.png" alt="">
       <b>APPLLEN</b>
       <el-input v-model="input" @click.native="search()" placeholder="搜索"  suffix-icon="el-icon-search"></el-input>
 
     </header>
+    <!-- 文章列表 -->
+    <section class="section clearfix">
+      <dl>
+        <dt>文章概览</dt>
+        <dd>An overview of the article</dd>
+      </dl>
+      <div class="article clearfix">
+        <div class="con_left clearfix fl">
+          <div class="article_con  iconfont  icon-icon-yuanxk2">
+            <div class="title_left fl">
+              <div class="title"> 排序算法 </div>
+              <div class="con">将一个记录（数）插入到已经拍好序的有序序列中，该数与将一个记录（数）插入到已经拍好序的有序序列中，该数与将一个记录（数）插入到已经拍好序的有序序列中，该数与</div>
+            </div>
+            <div class="time fr ">
+              <div class="date">05-09</div>
+              <div class="year">2017</div>
+            </div>
+          </div>
+          <div class="article_con">
+            <div class="title_left fl">
+              <div class="title">  </div>
+              <div class="con"></div>
+            </div>
+            <div class="time fr">
+              <div class="date"></div>
+              <div class="year"></div>
+            </div>
+          </div> 
+          <div class="article_con iconfont  icon-icon-yuanxk2">
+            <div class="title_left fl">
+              <div class="title"> 排序算法 </div>
+              <div class="con">将一个记录（数）插入到已经拍好序的有序序列中，该数与将一个记录（数）插入到已经拍好序的有序序列中，该数与将一个记录（数）插入到已经拍好序的有序序列中，该数与</div>
+            </div>
+            <div class="time fr">
+              <div class="date">05-09</div>
+              <div class="year">2017</div>
+            </div>
+          </div>
+          <div class="article_con">
+            <div class="title_left fl">
+              <div class="title">  </div>
+              <div class="con"></div>
+            </div>
+            <div class="time fr">
+              <div class="date"></div>
+              <div class="year"></div>
+            </div>
+          </div>      
+          <div class="article_con iconfont  icon-icon-yuanxk2">
+            <div class="title_left fl">
+              <div class="title"> 排序算法 </div>
+              <div class="con">将一个记录（数）插入到已经拍好序的有序序列中，该数与将一个记录（数）插入到已经拍好序的有序序列中，该数与将一个记录（数）插入到已经拍好序的有序序列中，该数与</div>
+            </div>
+            <div class="time fr">
+              <div class="date">05-09</div>
+              <div class="year">2017</div>
+            </div>
+          </div>
+          <div class="article_con">
+            <div class="title_left fl">
+              <div class="title">  </div>
+              <div class="con"></div>
+            </div>
+            <div class="time fr">
+              <div class="date"></div>
+              <div class="year"></div>
+            </div>
+          </div>              
+        </div>
+        <!-- <div class="con_middle clearfix fl">
+          <el-steps :active="active" direction="vertical" >
+            <el-step ></el-step>
+            <el-step ></el-step>
+            <el-step ></el-step>
+            <el-step ></el-step>
+            <el-step ></el-step>
+          </el-steps>
+
+        </div> -->
+        <div class="con_right clearfix fl">
+          <div class="article_con ">
+            <div class="title_left fr">
+              <div class="title">  </div>
+              <div class="con"></div>
+            </div>
+            <div class="time fl">
+              <div class="date"></div>
+              <div class="year"></div>
+            </div>
+          </div>   
+          <div class="article_con iconfont  icon-icon-yuanxk">
+            <div class="title_left fr">
+              <div class="title"> 排序算法 </div>
+              <div class="con">将一个记录（数）插入到已经拍好序的有序序列中，该数与将一个记录（数）插入到已经拍好序的有序序列中，该数与将一个记录（数）插入到已经拍好序的有序序列中，该数与</div>
+            </div>
+            <div class="time fl">
+              <div class="date">05-09</div>
+              <div class="year">2017</div>
+            </div>
+          </div>
+          <div class="article_con">
+            <div class="title_left fr">
+              <div class="title">  </div>
+              <div class="con"></div>
+            </div>
+            <div class="time fl">
+              <div class="date"></div>
+              <div class="year"></div>
+            </div>
+          </div>   
+          <div class="article_con iconfont  icon-icon-yuanxk">
+            <div class="title_left fr">
+              <div class="title"> 排序算法 </div>
+              <div class="con">将一个记录（数）插入到已经拍好序的有序序列中，该数与将一个记录（数）插入到已经拍好序的有序序列中，该数与将一个记录（数）插入到已经拍好序的有序序列中，该数与</div>
+            </div>
+            <div class="time fl">
+              <div class="date">05-09</div>
+              <div class="year">2017</div>
+            </div>
+          </div>     
+          <div class="article_con iconfont icon-yuanquanjiahao">
+            <div class="title_left fr">
+              <div class="title">  </div>
+              <div class="con"></div>
+            </div>
+            <div class="time fl">
+              <div class="date"></div>
+              <div class="year"></div>
+            </div>
+          </div>  
+        </div>
+
+      </div>
+
+    </section>
 
   </div>
 </template>
@@ -30,7 +168,8 @@ export default {
     return {
       msg: '前端首页',
       data:[],
-      searchValue:""
+      searchValue:"",
+      active:0
     }
   },
   created(){
@@ -49,16 +188,19 @@ export default {
 </script>
 <style lang="scss">
 .webIndex{
-  height: 100%;
   position: relative;
+  // .bg{
+  //   width: 100%;
+
+  // }
   header{
-      overflow: hidden;
-      position: fixed;
-      top: 0;
-      left: 0;
-      zoom: 1;
+      // overflow: hidden;
+      // position: fixed;
+      // top: 0;
+      // left: 0;
+      // zoom: 1;
       width: 100%;
-      height: 90%;
+      height:900px;
       background-color: #fff;
       -webkit-background-size: cover;
       -o-background-size: cover;
@@ -73,6 +215,7 @@ export default {
           font-weight: 300;
           letter-spacing: -0.6px;
           padding: 8px 30px;
+          cursor: pointer;
           background: rgba(3, 3, 3, 0.19);
           text-align: right;
           color: #ffffff;
@@ -138,6 +281,169 @@ export default {
       }
 
 
+  }
+  .section{
+    width: 100%;
+    height: auto;
+    background: #ebebeb;
+    dl{
+      width: 400px;
+      margin: 50px auto;
+      text-align: center;
+      dt{
+        width: 180px;
+        font-family: PingFangSC;
+        font-size: 36px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.9px;
+        text-align: center;
+        color: #000000;
+        margin: 0 auto;
+        padding: 15px 0;
+        border-top: 3px solid #767676;
+
+      }
+      dd{
+          font-size: 30px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: -0.8px;
+          text-align: right;
+          color: rgba(183, 151, 120, 0.5);
+      }
+    }
+    .article{
+      width: 1200px;
+      margin: 0 auto;
+      .con_left,.con_right{
+        width: 49%;
+        .article_con{
+          width:96%;
+          padding: 2%;
+          margin: 2% 0;
+          height: 150px;
+          position: relative;
+          &:after{
+
+          }
+          .title_left{
+            width: 70%;
+            text-align: right;
+            height: 100%;
+            font-family: PingFangSC;
+          
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            .title{
+                font-size: 26px;
+                letter-spacing: -0.8px;
+                color: #000000;
+                text-align: right;
+            }
+            .con{
+                font-size: 22px;
+                font-weight: 300;
+                font-style: normal;
+                height: 70px;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: -0.6px;
+                text-align: right;
+                color: #b79778;
+                padding-top: 10px;
+                word-wrap: normal;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-overflow: clip;
+                white-space: pre-wrap;
+            }
+          }
+          .time{
+            width: 30%;
+            height: 100%;
+            .date{
+                font-family: Didot;
+                font-size: 40px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: -1px;
+                text-align: right;
+                color: #b79778;
+                margin-top: -20px;
+            }
+            .year{
+                font-family: Didot;
+                font-size: 30px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: -0.8px;
+                text-align: right;
+                color: #b79778;
+            }
+
+          }
+        }
+        .icon-icon-yuanxk:before {
+           
+            position: absolute;
+            margin-left: -48px;
+            /* margin-top: 22px; */
+            font-size: 25px;
+            color: #595050;
+        }
+        .icon-yuanquanjiahao:before {
+            content: "\e626";
+            position: absolute;
+            margin-left: -48px;
+            bottom: -12px;
+            /* margin-top: 22px; */
+            font-size: 25px;
+            color: #595050;
+        }
+       .icon-icon-yuanxk2:after {
+            content: "\E613";
+            position: absolute;
+            right: -38px;
+            font-size: 25px;
+            color: #595050;
+        }
+      }
+      .con_right{
+         border-left: 2px solid #b1aaaa;
+         .article_con  {
+           float: right;
+           .title_left,.time{
+              .title,.con{
+                text-align: left;
+              }
+              .date,.year{
+                text-align: left;
+              }
+           }
+
+         } 
+        
+      }
+      .con_middle{
+        width: 2%;
+        height: 800px;
+        
+      }
+      .con_right{
+         width: 49%;
+      }
+    }
   }
   
 }

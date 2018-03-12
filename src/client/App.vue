@@ -24,11 +24,18 @@ export default {
 
 <style lang="scss" >
 @import "./static/css/base.scss";
+@import "./static/font/iconfont.css";
+@font-face {
+    font-family: "Didot";
+    src: url('./static/font/didot-htf-m96-medium-ital.ttf');
+    // src: local("☺"), url("Chantelli_Antiqua-webfont.woff") format("woff"), url("Chantelli_Antiqua-webfont.ttf") format("truetype"), url("Chantelli_Antiqua-webfont.svg#webfontZjhIjbDc") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
 html,
 body,
 .app {
   width: 100%;
-  height:100%;
 }
 
 </style>
